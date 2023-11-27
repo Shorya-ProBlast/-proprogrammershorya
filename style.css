@@ -1,0 +1,831 @@
+/* ---------- Universal Styling ---------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    font-family: 'Patrick Hand', cursive;
+    user-select: none;
+}
+
+/* ---------- Variables ---------- */
+
+:root {
+    --about_text_tilt_perspective: 2000px;
+}
+
+/* ---------- Custom ScrollBar ---------- */
+
+::-webkit-scrollbar {
+    width: 1px;
+}
+
+::-webkit-scrollbar-track {
+    background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #000;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #393939;
+}
+
+/* ---------- Main Container ---------- */
+
+.main-container {
+    max-width: 100%;
+    min-height: 100vh;
+}
+
+/* ---------- Balls Bg Animation Holder ---------- */
+
+.ani-balls-holder {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100vh;
+    background: #000;
+    overflow: hidden;
+}
+
+.ani-balls-holder .element {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    scale: .35;
+    background-color: #333;
+    border-radius: 50%;
+}
+
+/* ---------- Home Page Content ---------- */
+
+.home-page-content {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.home-page-box-alignment {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    height: 100vh;
+    color: #fff;
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.home-page-box-alignment:nth-child(2) {
+    padding-bottom: 80px;
+    margin: 0 10px;
+}
+
+.home-page-box-alignment h1 {
+    font-size: 65px;
+    -webkit-text-stroke: 1.5px #fff;
+    font-weight: 100;
+    color: rgba(255, 0, 212, 0.361);
+}
+
+.home-page-box-alignment h1 span {
+    font-size: 160px;
+    letter-spacing: 1px;
+    color: rgba(0, 247, 255, 0.369);
+    line-height: 140px;
+}
+
+/* ---------- Pop-Up Image ---------- */
+
+.pop-up-img {
+    animation: pop-up-img-ani 2s linear infinite;
+}
+
+@keyframes pop-up-img-ani {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.15);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* ---------- Come on March In Btn ---------- */
+
+.btn-home {
+    width: 300px;
+    height: 50px;
+    background: #ff0048;
+    box-shadow: 0 0 10px #ff0048, 0 0 30px #ff0048, 0 0 50px #ff0048, 0 0 70px #ff0048;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 60px;
+    font-size: 27px;
+    scale: 1;
+    transition: .5s;
+    font-weight: 800;
+    letter-spacing: .8px;
+    user-select: none;
+}
+
+.btn-home:hover {
+    background: #ec0043;
+    scale: 1.1;
+}
+
+/* ---------- About Container ---------- */
+
+.about-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    user-select: none;
+    cursor: default;
+}
+
+.about {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 0;
+    transition: 1s;
+    user-select: none;
+    cursor: default;
+}
+
+/* ---------- Gradient Background ---------- */
+
+.gradientBox {
+    width: 690px;
+    height: 690px;
+    border: 1px solid #000;
+    position: absolute;
+    filter: blur(150px);
+    z-index: -10;
+}
+
+.gradientBox1 {
+    top: -40%;
+    left: 23%;
+    background-color: #db009d;
+    z-index: -2;
+}
+
+.gradientBox2 {
+    bottom: 3%;
+    left: 2%;
+    width: 550px;
+    height: 560px;
+    background-color: #ffe83b;
+}
+
+.gradientBox3 {
+    bottom: 10%;
+    right: 1%;
+    width: 490px;
+    height: 470px;
+    background-color: #008089;
+}
+
+.gradientBox4 {
+    bottom: 2%;
+    left: 35%;
+    width: 390px;
+    height: 390px;
+    background-color: #3f9700;
+    z-index: -1;
+}
+
+/* ---------- About Text ---------- */
+
+.about-text {
+    font-size: 30px;
+    width: 75%;
+    padding: 20px 40px;
+    border-radius: 5px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4), 0 0 20px rgba(0, 0, 0, 0.4);
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #57104e;
+    user-select: none;
+    cursor: default;
+    position: absolute;
+    left: -80%;
+}
+
+.about-text-ani {
+    animation: about-text-ani .6s ease-in 1;
+    left: 12%;
+}
+
+@keyframes about-text-ani {
+    0% {
+        left: -80%;
+    }
+
+    100% {
+        left: 12%;
+    }
+}
+
+/* ---------- Return Btn ---------- */
+
+.return-btn {
+    width: 90px;
+    height: 40px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 20px;
+    background: #ff0048;
+    cursor: pointer;
+    color: #fff;
+    font-size: 20px;
+    scale: 1;
+    transition: .5s;
+    box-shadow: 0 0 5px #ff0048, 0 0 15px #ff0048;
+    user-select: none
+}
+
+.return-btn:hover {
+    background: #ec0043;
+    scale: 1.1
+}
+
+/* ---------- Next Btn ---------- */
+
+.next-btn {
+    width: 90px;
+    height: 40px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 20px;
+    background: #ff0048;
+    cursor: pointer;
+    color: #fff;
+    font-size: 20px;
+    scale: 1;
+    transition: .5s;
+    box-shadow: 0 0 5px #ff0048, 0 0 15px #ff0048;
+    user-select: none
+}
+
+.next-btn:hover {
+    background: #ec0043;
+    scale: 1.1
+}
+
+/* ---------- Canvas Background ---------- */
+
+#canvas {
+    z-index: -1
+}
+
+/* ---------- Slide 3 and 4 Container ---------- */
+
+.slide3and4container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    right: -100%;
+    transition: 1s
+}
+
+/* ---------- Slide 3 ---------- */
+
+.slide3 {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background: linear-gradient(to bottom left, #f7ff00, #db36a4);
+    flex-direction: column;
+    transition: 1s
+}
+
+#canvasdropballsbg {
+    border: #000;
+    z-index: 0;
+    position: absolute
+}
+
+.slide3content {
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh
+}
+
+.what-to-view {
+    width: 75%;
+    font-size: 35px;
+    padding: 20px 40px;
+    border-radius: 5px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #57104e;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4), 0 0 20px rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    user-select: none;
+    cursor: default
+}
+
+.ques {
+    font-size: 60px
+}
+
+.slide3btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 300px;
+    overflow: hidden;
+    padding: 50px
+}
+
+.gamebtn {
+    width: 200px;
+    height: 50px;
+    background-color: #ff0048;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: .5s;
+    box-shadow: 0 0 20px #ff0048, 0 0 30px #ff0048;
+    padding: 10px;
+    user-select: none
+}
+
+.gamebtn:hover {
+    background: #ec0043;
+    scale: 1.1
+}
+
+.animationbtn {
+    width: 250px;
+    height: 50px;
+    background-color: #ff0048;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: 5px;
+    transition: .5s;
+    box-shadow: 0 0 20px #ff0048, 0 0 30px #ff0048;
+    padding: 10px;
+    user-select: none
+}
+
+.animationbtn:hover {
+    background: #ec0043;
+    scale: 1.1;
+    border-radius: 10px
+}
+
+.slide3back-btn {
+    width: 90px;
+    height: 40px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 20px;
+    background: #ff0048;
+    cursor: pointer;
+    color: #fff;
+    font-size: 20px;
+    scale: 1;
+    transition: .5s;
+    box-shadow: 0 0 5px #ff0048, 0 0 15px #ff0048;
+    user-select: none
+}
+
+.slide3back-btn:hover {
+    background: #ec0043;
+    scale: 1.1
+}
+
+.slide3btns a {
+    text-decoration: none
+}
+
+/* ---------- Slide 4 ---------- */
+
+.slide4 {
+    min-height: 100vh;
+    width: 100%;
+    background: linear-gradient(to right top, aqua, #db009d);
+    position: relative
+}
+
+.ques- {
+    font-size: 60px
+}
+
+.slide4content {
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    position: relative
+}
+
+.ani {
+    width: 75%;
+    font-size: 35px;
+    padding: 20px 40px;
+    border-radius: 5px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.2);
+    color: red;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4), 0 0 20px rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    -webkit-text-stroke: 1.5px #000;
+    animation: textcolorchange 10s linear infinite;
+    user-select: none;
+    cursor: default
+}
+
+@keyframes textcolorchange {
+    0% {
+        color: red
+    }
+
+    16.7% {
+        color: #0f0
+    }
+
+    33.4% {
+        color: #f0f
+    }
+
+    50.1% {
+        color: #ff0
+    }
+
+    66.8% {
+        color: #0ff
+    }
+
+    83.5% {
+        color: #0023ec
+    }
+
+    100% {
+        color: red
+    }
+}
+
+.circleleft {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    top: 50px;
+    left: 100px;
+    border-radius: 50%;
+    z-index: 0;
+    background: #7fff00;
+    animation: toptobottom 4s ease-in-out infinite
+}
+
+@keyframes toptobottom {
+    0% {
+        top: 50px;
+        background: #7fff00
+    }
+
+    50% {
+        top: 465px;
+        background: #ff0048
+    }
+
+    100% {
+        top: 50px;
+        background: #7fff00
+    }
+}
+
+.circleright {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    bottom: 300px;
+    right: 100px;
+    border-radius: 50%;
+    z-index: 0;
+    background: #7fff00;
+    animation: bottomtotop 4s ease-in-out infinite
+}
+
+@keyframes bottomtotop {
+    0% {
+        bottom: 50px;
+        background: blue
+    }
+
+    50% {
+        bottom: 465px;
+        background: #ff0
+    }
+
+    100% {
+        bottom: 50px;
+        background: blue
+    }
+}
+
+.slide4btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 300px;
+    overflow: hidden;
+    padding: 50px;
+    font-size: 20px;
+    font-weight: 100;
+    letter-spacing: 3px
+}
+
+.bioanibtn {
+    width: 200px;
+    height: 60px;
+    background-color: #ff0048;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: .5s;
+    box-shadow: 0 0 20px #ff0048, 0 0 30px #ff0048;
+    padding: 10px;
+    user-select: none
+}
+
+.bioanibtn:hover {
+    background: #ec0043;
+    scale: 1.1
+}
+
+.funanibtn {
+    width: 250px;
+    height: 60px;
+    background-color: #ff0048;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: 5px;
+    transition: .5s;
+    box-shadow: 0 0 20px #ff0048, 0 0 30px #ff0048;
+    padding: 10px;
+    user-select: none
+}
+
+.funanibtn:hover {
+    background: #ec0043;
+    scale: 1.1;
+    border-radius: 10px
+}
+
+.slide4back-btn {
+    width: 90px;
+    height: 40px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 20px;
+    background: #ff0048;
+    cursor: pointer;
+    color: #fff;
+    font-size: 20px;
+    scale: 1;
+    transition: .5s;
+    box-shadow: 0 0 5px #ff0048, 0 0 15px #ff0048;
+    user-select: none;
+    cursor: pointer;
+    user-select: none
+}
+
+.slide4back-btn:hover {
+    background: #ec0043;
+    scale: 1.1
+}
+
+.slide4btns a {
+    text-decoration: none
+}
+
+.slide5 {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to bottom right, red, green);
+    position: relative
+}
+
+.ani2 {
+    width: 50%;
+    font-size: 35px;
+    padding: 20px 40px;
+    border-radius: 5px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.2);
+    color: red;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4), 0 0 20px rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    -webkit-text-stroke: 1.5px #000;
+    animation: textcolorchange 10s linear infinite;
+    position: relative;
+    cursor: default;
+    user-select: none
+}
+
+/* ---------- Slide 5 ---------- */
+
+.slide5content {
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    position: relative
+}
+
+.circleleft2 {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    top: 50px;
+    left: 200px;
+    border-radius: 50%;
+    z-index: 0;
+    background: #7fff00;
+    animation: toptobottom 4s ease-in-out infinite
+}
+
+.circleright2 {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    bottom: 300px;
+    right: 200px;
+    border-radius: 50%;
+    z-index: 0;
+    background: #7fff00;
+    animation: bottomtotop 4s ease-in-out infinite
+}
+
+.triangle_btn_tic_tac_toe {
+    width: 300px;
+    height: 300px;
+    rotate: 45deg;
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4), 0 0 20px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+    right: 90px;
+    bottom: -150px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    transition: .5s
+}
+
+.triangle_btn_tic_tac_toe:hover {
+    scale: 1.2
+}
+
+.text_tic_tac_toe {
+    -webkit-text-stroke: 1.5px #000;
+    color: orange;
+    font-size: 50px;
+    z-index: 10;
+    user-select: none;
+    rotate: -45deg;
+    margin: 40px
+}
+
+.triangle_btn_rocket_game {
+    width: 300px;
+    height: 300px;
+    rotate: 135deg;
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4), 0 0 20px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+    left: 90px;
+    top: -150px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: #000;
+    transition: .5s
+}
+
+.text_rocket_game {
+    -webkit-text-stroke: 1.5px #000;
+    color: #f200f6;
+    font-size: 40px;
+    z-index: 10;
+    user-select: none;
+    margin: 17px;
+    text-align: center;
+    display: flex;
+    rotate: 225deg;
+    justify-content: center;
+    align-items: flex-end;
+    padding-top: 160px
+}
+
+.triangle_btn_rocket_game:hover {
+    scale: 1.2
+}
+
+/* ---------- Style Sheet Finishes Here ---------- */

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Links -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="thank_you.css">
+
+    <title>Thank You</title>
+</head>
+
+<body>
+    <div class="main_container">
+
+        <!-- Text Container -->
+        <div class="text_container">
+            <h1>Congrats!!! <br> <span>We've reached the end 🥳</span></h1>
+
+            <div class="ani_text_holder">
+
+                <!-- Animated Text  -->
+                <div class="animated_text">
+                    <h2>धन्यवाद 🙏</h2>
+                    <h2>Thank You 🙏</h2>
+                    <h2>Team Shikshankur 🏫</h2>
+                    <h2>HTML, CSS & JS 💻</h2>
+                    <h2>Arav Sah</h2>
+                    <h2>Shorya Kulshreshtha</h2>
+                </div>
+            </div>
+        </div>
+
+        <!-- FireCracker Animation -->
+        <div class="animation_container">
+            <div class="burst">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        function createBurst() {
+            let animContainer = document.querySelector('.animation_container');
+            let burst = document.querySelector('.burst');
+
+            burst.style.top = Math.random() * innerHeight + 'px';
+            burst.style.left = Math.random() * innerWidth + 'px';
+
+            let burstClone = burst.cloneNode(true);
+            animContainer.appendChild(burstClone);
+
+            setTimeout(() => {
+                burstClone.remove();
+            }, 9500);
+        }
+
+        setInterval(createBurst, 450);
+    </script>
+</body>
+
+</html>
